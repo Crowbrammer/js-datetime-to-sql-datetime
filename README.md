@@ -9,17 +9,13 @@
  
 <a name="convert-to-sql-string"></a>
 # Convert to SQL string
-returns a sql-friendly string from a JS Date object.
+
+returns a sql-friendly string from a JS Date object or POSIX timestamp.
 
 ```js
-// Put a known timestamp into it and compare the result
-expect(toSQLDate(new Date(1604940393706))).to.equal('2020-11-09 11:46:33')
+const expect = require('chai').expect;
+const toSQLDate = require('js-date-to-sql-datetime');
+
+toSQLDate(new Date(1604940393706)); // '2020-11-09 11:46:33'
+toSQLDate(1604940393706);           // '2020-11-09 11:46:33'
 ```
-
-returns a sql-friendly string from POSIX timestamp.
-
-```js
-// Put a known timestamp into it and compare the result
-expect(toSQLDate(1604940393706)).to.equal('2020-11-09 11:46:33')
-```
-
