@@ -1,6 +1,6 @@
-### Zero-fill a number to the given size.
+### Convert a JS Date object to a (My)SQL-friendly string!
 
-![zero](https://raw.githubusercontent.com/feross/zero-fill/master/img.png)
+![Hedgehog](https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lionel-animals-to-follow-on-instagram-1568319926.jpg)
 
 ## install
 
