@@ -7,12 +7,12 @@ module.exports = function toSQLDatetime(dt) {
         default:
             break;
     }
-    var Y = dt.getFullYear();
-    var M = zeroFill(2, dt.getMonth() + 1);
+    var YYYY = dt.getFullYear();
+    var MM = zeroFill(2, dt.getMonth() + 1);
     ;
-    var D = zeroFill(2, dt.getDate());
-    var h = zeroFill(2, dt.getHours());
-    var m = zeroFill(2, dt.getMinutes());
-    var s = zeroFill(2, dt.getSeconds());
-    return '2020-11-09 11:46:33';
+    var DD = zeroFill(2, dt.getDate());
+    var hh = zeroFill(2, dt.getHours());
+    var mm = zeroFill(2, dt.getMinutes());
+    var ss = zeroFill(2, dt.getSeconds());
+    return YYYY + "-" + MM + "-" + DD + " " + hh + ":" + mm + ":" + ss;
 };

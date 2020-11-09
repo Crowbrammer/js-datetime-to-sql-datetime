@@ -1,21 +1,25 @@
-### Convert a JS Date object to a (My)SQL-friendly string!
+# TOC
+   - [Installation](#installation)
+   - [Convert to SQL string](#convert-to-sql-string)
+<a name=""></a>
 
-![Hedgehog](https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lionel-animals-to-follow-on-instagram-1568319926.jpg)
-
-## install
-
-```
+<a name="installation"></a>
+# Installation
 `npm i js-date-to-sql-datetime`
-```
-
-## usage
+ 
+<a name="convert-to-sql-string"></a>
+# Convert to SQL string
+returns a sql-friendly string from a JS Date object.
 
 ```js
-const jsDateToSQLDate = require('js-date-to-sql-datetime');
-
-console.log(jsDateToSQLDate(new Date())) // '2020-10-27 05:27:17'
+// Put a known timestamp into it and compare the result
+expect(toSQLDate(new Date(1604940393706))).to.equal('2020-11-09 11:46:33')
 ```
 
-## license
+returns a sql-friendly string from POSIX timestamp.
 
-MIT. Copyright (c) Aaron Bell
+```js
+// Put a known timestamp into it and compare the result
+expect(toSQLDate(1604940393706)).to.equal('2020-11-09 11:46:33')
+```
+
