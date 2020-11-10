@@ -2,6 +2,12 @@ const expect = require('chai').expect;
 const toSQLDate = require(__dirname + '/../index');
 
 describe('Convert to SQL string', function() {
+
+    // After: I put in a SQL datetime string
+    // Then:
+    it('Just returns the string if it\'s a SQL datetime string', function () {
+        expect(toSQLDate('2020-11-09 11:46:33')).to.equal('2020-11-09 11:46:33')
+    })
     
     // After: I put in a Date object
     // Then:
